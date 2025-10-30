@@ -1,46 +1,74 @@
-// ===== FADE-IN ON SCROLL =====
-const faders = document.querySelectorAll('.fade-in');
-// Options for the Intersection Observer
-const appearOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' };
+/**
+ * CASE-SCRIPT.JS
+ * * Provides interactive features for the case study pages:
+ * 1. Fade-in animation for elements on scroll visibility.
+ * 2. Animated counter for metric sections upon visibility.
+ */
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
+// --------------------------------------------------
+// 1. FADE-IN ON SCROLL (Visibility Animation)
+// --------------------------------------------------
+
+const faders = document.querySelectorAll('.fade-in');
+
+// Options: Triggers when 20% of the element is visible.
+const fadeOptions = {
+    threshold: 0.2, 
+    rootMargin: '0px 0px -50px 0px' // Starts slightly before bottom of viewport
+};
+
+const fadeObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return; // If not visible, do nothing
+        
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Stop observing once animated
+    });
+}, fadeOptions);
 
 faders.forEach(fadeEl => {
-  appearOnScroll.observe(fadeEl);
+    fadeObserver.observe(fadeEl);
 });
 
-// ===== COUNTER ANIMATION =====
+
+// --------------------------------------------------
+// 2. COUNTER ANIMATION (Metrics Section)
+// --------------------------------------------------
+
 const counters = document.querySelectorAll('.counter');
-const counterOptions = { threshold: 0.6 };
+
+// Options: Triggers when 60% of the counter area is visible.
+const counterOptions = { 
+    threshold: 0.6 
+};
 
 const counterObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const counter = entry.target;
-      const update = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        // Increment calculated to finish the count within a set time (e.g., ~1.5 seconds)
-        const increment = target / 60; 
-        
-        if (count < target) {
-          // Use Math.ceil to ensure we don't count fractional numbers, making it look smoother
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(update, 25); // Faster interval for smoother animation
-        } else {
-          counter.innerText = target;
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute('data-target');
+            const duration = 1500; // Total animation time in milliseconds
+            const steps = 60; // Number of update cycles (adjusts smoothness)
+            const interval = duration / steps;
+            const increment = target / steps;
+
+            const updateCount = () => {
+                const count = +counter.innerText;
+                
+                if (count < target) {
+                    // Use Math.ceil to ensure numbers are whole and count up smoothly
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, interval);
+                } else {
+                    // Ensure the final number is exactly the target number
+                    counter.innerText = target;
+                }
+            };
+            
+            updateCount();
+            observer.unobserve(counter); // Stop observing after animation starts
         }
-      };
-      update();
-      observer.unobserve(counter);
-    }
-  });
+    });
 }, counterOptions);
 
 counters.forEach(counter => counterObserver.observe(counter));

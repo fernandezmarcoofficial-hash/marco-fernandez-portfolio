@@ -1,224 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Marco C. Fernandez - Systems Innovator and Founder of MAFEINNVIONS. Explore projects, skills, and contact information.">
-    <title>Marco Fernandez | MAFEINNVIONS Portfolio</title>
-    <link rel="icon" href="Offcl.png" sizes="40x50">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Marco C. Fernandez - Software Developer and IT Automation Specialist. Portfolio showcasing projects in AI, IoT, and Cybersecurity." />
+    <title>Marco Fernandez | Software & Automation Specialist</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Montserrat:wght@500;700;800&family=Playfair+Display:ital,wght@1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="icon" href="Offcl.png" sizes="40x50" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet" />
     
-    <link rel="stylesheet" href="styles.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+
+    <link rel="stylesheet" href="styles.css" /> 
+    </head>
 
 <body>
+
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <h1>MARCO FERNANDEZ <span>| Portfolio</span></h1>
-                <p class="tagline">"Innovating Smart Systems and Meaningful Solutions for a Better Tomorrow"</p>
-            </div>
+            <div class="logo">MARCO <span>FERNANDEZ</span></div>
             <ul class="main-nav">
-                <li><a href="#about-me">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero-modern">
-        <div class="hero-left fade-in">
-            <div class="logo-block">
-                <img src="Offcl.png" alt="MAFEINNVIONS Logo" class="hero-logo">
-                <div class="brand-text">
-                    <h3 class="brand-name">MAFEINNVIONS</h3>
-                    <p class="brand-sub">Marco Fernandez Innovations</p>
-                </div>
-            </div>
-            <p class="hero-subtext">
-                I design, automate, and secure digital ecosystems — helping teams and organizations build smarter, safer, and more sustainable systems.
+    <section id="hero" class="hero-section">
+        <div class="hero-content fade-in">
+            <h1 class="hero-title">Hello, I'm Marco.</h1>
+            <p class="hero-subtitle">
+                A **Software Developer & IT Automation Specialist** <br>
+                building secure, intelligent systems through code and engineering discipline.
             </p>
-            <h2>HI! MY NAME IS MARCO!</h2>
-            <h1>TO MANAGE<br><span>YOUR BUSINESS</span></h1>
-            <p>
-                I help organizations transform ideas into structured, human-centered systems. 
-                My mission is to connect creativity, strategy, and technology for smarter, sustainable growth.
-            </p>
-            <a href="resume.pdf" class="resume-btn" target="_blank">RESUME <span>→</span></a>
-        </div>
-        
-        <div class="hero-right fade-in">
-            <div class="photo-frame">
-                <img src="Photo.png" alt="Marco C. Fernandez" class="hero-photo">
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
     </section>
 
-    <section class="about" id="about-me">
-        <div class="about-container">
+    <section id="about" class="about-section">
+        <h2 class="section-heading fade-in">
+            <i class="fas fa-user-circle"></i> About Me
+        </h2>
+        <div class="about-grid">
             <div class="about-text fade-in">
-                <h2>About Me</h2>
                 <p>
-                    Hi! I am **Marco C. Fernandez** — founder of **MAFEINNVIONS (Marco Fernandez Innovations)**.
-                    I am passionate about transforming complex ideas into clear, structured, and human-centered systems.
+                    As the Founder of **MAFEINNVIONS**, my work revolves around solving complex operational challenges using automated systems, data science, and security frameworks. My mission is to develop robust, scalable, and secure applications that minimize manual overhead and maximize intelligence.
                 </p>
                 <p>
-                    My work bridges creativity, technology, and purpose — helping individuals and organizations use digital tools with strategy, security, and sustainability in mind.
+                    I specialize in bridging the gap between hardware (IoT/Microcontrollers) and cloud infrastructure, utilizing Python, C++, and Bash to build resilient, end-to-end solutions. I thrive on projects that demand both low-level system understanding and high-level architectural design.
                 </p>
-                <p>
-                    I believe that **discipline and innovation** create long-term impact. Whether I am automating workflows, designing systems, or securing Linux environments, my mission stays the same:
-                    *to turn ideas into intelligent, meaningful solutions that move people and businesses forward.*
-                </p>
-                <a href="#contact" class="about-btn">Let’s Connect</a>
+                <a href="#contact" class="btn-link">Let's build something innovative together. →</a>
             </div>
-            <div class="about-photo fade-in">
-                <img src="Photo2.png" alt="Marco Fernandez Profile Photo">
+            <div class="profile-image fade-in">
+                <img src="assets/images/marco-profile.jpg" alt="Marco Fernandez Profile Picture" />
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section bg-light">
+        <h2 class="section-heading fade-in">
+            <i class="fas fa-tools"></i> Core Expertise
+        </h2>
+        <div class="skills-grid">
+            
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-laptop-code"></i> Development & Languages</h3>
+                <ul class="skill-list">
+                    <li>Python (Data Science, Automation)</li>
+                    <li>C / C++ (Embedded Systems, Microcontrollers)</li>
+                    <li>HTML5 / CSS3 / JavaScript</li>
+                    <li>Bash & Shell Scripting (Linux Automation)</li>
+                </ul>
+            </div>
+
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-cloud"></i> Systems & Infrastructure</h3>
+                <ul class="skill-list">
+                    <li>Linux System Administration & Hardening</li>
+                    <li>IoT/Embedded Systems (ESP32, Arduino)</li>
+                    <li>Network & Firewall Configuration (UFW, iptables)</li>
+                    <li>Cloud Services (Firebase, basic AWS)</li>
+                </ul>
+            </div>
+
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-shield-alt"></i> Specialties & Security</h3>
+                <ul class="skill-list">
+                    <li>AI/ML Integration (OpenAI API)</li>
+                    <li>Prompt Engineering</li>
+                    <li>Security Auditing & Penetration Testing</li>
+                    <li>Data Integrity (AIDE, Checksum Validation)</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="projects" class="projects-section">
-        <h2 class="fade-in">Projects & Case Studies</h2>
-        <p class="projects-intro fade-in">
-            A collection of systems and experiments I’ve built — blending design, logic, and real-world impact.
-        </p>
-        <div class="grid-layout">
+        <h2 class="section-heading fade-in">
+            <i class="fas fa-project-diagram"></i> Featured Projects
+        </h2>
+        <p class="section-tagline fade-in">Detailed case studies demonstrating technical depth, process, and measurable impact.</p>
+        
+        <div class="projects-grid">
+            
             <div class="project-card fade-in">
-                <h3>System Security Automation</h3>
-                <p>
-                    A Linux-based auditing and automation tool for continuous security monitoring using Bash scripting, AIDE, and log tracking — developed to ensure compliance and reduce manual checks.
-                </p>
-                <ul class="tech-list">
-                    <li>Linux Mint</li>
-                    <li>Bash Scripting</li>
-                    <li>AIDE</li>
-                    <li>Automation</li>
-                </ul>
-                <a href="case-linux-audit.html" class="case-link">View Case Study →</a>
+                <div class="icon-header">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI Dashboard & Analytics Assistant</h3>
+                <p>A Python and OpenAI-based platform that automates complex data reporting, forecasting, and strategic decision analysis.</p>
+                <a href="CASE-AI-DASHBOARD.HTML" class="btn btn-primary">View Case Study →</a>
             </div>
+
             <div class="project-card fade-in">
-                <h3>AI-Driven Insights Dashboard</h3>
-                <p>
-                    An intelligent web system integrating ChatGPT and analytics APIs for generating actionable insights and visual dashboards that assist teams in decision-making.
-                </p>
-                <ul class="tech-list">
-                    <li>HTML</li>
-                    <li>JavaScript</li>
-                    <li>AI Integration</li>
-                    <li>Data Visualization</li>
-                </ul>
-                <a href="case-ai-dashboard.html" class="case-link">View Case Study →</a>
+                <div class="icon-header">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h3>Linux Security Audit & Hardening</h3>
+                <p>An automated Bash framework for system hardening, continuous integrity verification (AIDE), and real-time intrusion monitoring.</p>
+                <a href="CASE-LINUX-AUDIT.HTML" class="btn btn-primary">View Case Study →</a>
             </div>
+
             <div class="project-card fade-in">
-                <h3>ESP32-WROOM Smart Security System</h3>
-                <p>
-                    Designed and programmed IoT-based home security systems with PIN/Fingerprint locks, motion sensors, and networked CCTV for household and establishment safety.
-                </p>
-                <ul class="tech-list">
-                    <li>ESP32:WROOM</li>
-                    <li>Embedded C</li>
-                    <li>Hardware Integration</li>
-                    <li>IoT Security</li>
-                </ul>
-                <a href="case-iot-system.html" class="case-link">View Case Study →</a>
-            </div>
-            <div class="project-card fade-in">
-                <h3>MAFEINNVIONS Landing Page</h3>
-                <p>
-                    The official brand site for MAFEINNVIONS — designed from scratch with a human-centered, responsive layout showcasing innovation and clarity in presentation.
-                </p>
-                <ul class="tech-list">
-                    <li>HTML5</li>
-                    <li>CSS3 (Flexbox)</li>
-                    <li>UI/UX Design</li>
-                    <li>Responsive Design</li>
-                </ul>
-                <a href="case-landing.html" class="case-link">View Case Study →</a>
+                <div class="icon-header">
+                    <i class="fas fa-house-damage"></i>
+                </div>
+                <h3>IoT Smart Security System</h3>
+                <p>End-to-end security solution using ESP32, secure MQTT, and a Flask API for low-latency, cloud-integrated home monitoring.</p>
+                <a href="CASE-IOT-SYSTEMS.HTML" class="btn btn-primary">View Case Study →</a>
             </div>
         </div>
     </section>
 
-    <section class="skills" id="skills">
-        <h2 class="fade-in">Skills & Tools</h2>
-        <p class="skills-intro fade-in">
-        A blend of technical mastery and creative systems thinking — connecting technology, automation, and purposeful innovation.
-        </p>
-        <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <h3><i class="fas fa-terminal"></i> Linux & Security</h3>
-                <ul>
-                    <li>System Hardening & Automation</li>
-                    <li>Security Auditing (AIDE, Fail2ban)</li>
-                    <li>Shell Scripting & Monitoring</li>
-                    <li>Server Management (SSH, ufw, cron)</li>
-                </ul>
+    <section id="contact" class="contact-section bg-light">
+        <h2 class="section-heading fade-in">
+            <i class="fas fa-envelope"></i> Contact Me
+        </h2>
+        <div class="contact-content fade-in">
+            <p>I am actively seeking new collaborative opportunities and challenging projects in IT automation, security, and smart systems development. Feel free to reach out directly.</p>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-at"></i> **Email:** <a href="mailto:marcoc.fernandez@mafeinnvions.com">marcoc.fernandez@mafeinnvions.com</a></p>
+                <p><i class="fab fa-linkedin"></i> **LinkedIn:** <a href="[Your LinkedIn URL]" target="_blank">linkedin.com/in/MarcoFernandez</a></p>
+                <p><i class="fab fa-github"></i> **GitHub:** <a href="https://github.com/fernandezmarcoofficial-hash" target="_blank">github.com/fernandezmarcoofficial-hash</a></p>
             </div>
-            <div class="skill-card fade-in">
-                <h3><i class="fas fa-cogs"></i> Systems & Automation</h3>
-                <ul>
-                    <li>Accounts Payable Systems</li>
-                    <li>Workflow & Data Automation</li>
-                    <li>API Integrations & Process Optimization</li>
-                    <li>Version Control (Git / GitHub)</li>
-                </ul>
+            
             </div>
-            <div class="skill-card fade-in">
-                <h3><i class="fas fa-brain"></i> AI & Innovation</h3>
-                <ul>
-                    <li>Generative AI (ChatGPT & Automation)</li>
-                    <li>Data Insight & Analysis</li>
-                    <li>Prompt Engineering</li>
-                    <li>AI-driven Strategy Mapping</li>
-                </ul>
-            </div>
-            <div class="skill-card fade-in">
-                <h3><i class="fas fa-chart-line"></i> Business & Management</h3>
-                <ul>
-                    <li>Accounts Payable Operations</li>
-                    <li>Financial Data Accuracy</li>
-                    <li>Organizational Documentation</li>
-                    <li>Leadership & Strategic Planning</li>
-                </ul>
-            </div>
-        </div>
     </section>
 
-    <footer id="contact"> 
-        <a href="Marco_Fernandez_Resume.pdf" target="_blank" class="resume-btn">
-            📄 View My Resume
-        </a>
-        <p class="resume-note">Opens in a new tab · PDF Format</p>
-        <h2>Contact Me</h2>
-        <p>I am currently seeking new opportunities and open to discussing projects. Feel free to reach out!</p>
-        
-        <p><a href="mailto:fernandezmarcoofficial@gmail.com" class="contact-link">fernandezmarcoofficial@gmail.com</a></p>
-        <p><a href="tel:+639977259223" class="contact-link">+63 997 725 9223</a></p>
-        
-        <ul class="social-links">
-            <li><a href="https://www.linkedin.com/in/marco.fernandez-8a508938b/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.github.com/fernandezmarcoofficial-hash" target="_blank">Github</a></li>
-            <li><a href="https://www.credly.com/users/marco-fernandez.official.credy/" target="_blank">Credly</a></li>
-            <li><a href="https://www.orcid.org/0009-0009-0847-9435" target="_blank">ORCID</a></li>
-        </ul>
-        <p class="copyright">© 2025 Marco C. Fernandez - MAFEINNVIONS</p>
+    <footer>
+        <p>© 2025 Marco C. Fernandez | MAFEINNVIONS</p>
+        <div class="social-links">
+            <a href="[Your LinkedIn URL]" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/fernandezmarcoofficial-hash" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
     </footer>
 
     <script>
-        // Intersection Observer for fade-in effect on the index page
-        const elements = document.querySelectorAll('.fade-in');
+        // Simple Intersection Observer for general fade-in effects across the index page
+        const faders = document.querySelectorAll('.fade-in');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); 
+                    observer.unobserve(entry.target);
                 }
             });
-        });
-        elements.forEach(el => observer.observe(el));
+        }, { threshold: 0.1 });
+
+        faders.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>

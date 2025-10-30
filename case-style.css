@@ -1,217 +1,214 @@
 /*
 |--------------------------------------------------------------------------
-| CASE STUDY GLOBAL STYLING
+| CASE STUDY STYLES (Overrides/Extensions to main styles.css)
 |--------------------------------------------------------------------------
+| This file handles the specific layout and design of individual case study pages.
 */
-:root {
-  --color-primary: #5e0808;       /* Dark Red/Maroon */
-  --color-secondary: #a0203c;    /* Maroon for accents */
-  --color-accent: #00bcd4;       /* Cyan/Teal for secondary accents */
-  --color-dark: #0f172a;         /* Near-Black */
-  --color-white: #ffffff;
-}
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* --- 1. Base Setup (Ensure Poppins is active) --- */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f9fafc;
-  color: #222;
-  line-height: 1.6;
-  scroll-behavior: smooth;
+    background: var(--color-bg-light, #f5f7fa);
+    color: var(--color-text-dark, #222);
+    line-height: 1.6;
 }
-a {
+
+/* --- 2. Header and Hero Section --- */
+
+.case-header {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    background: var(--color-text-dark, #0f172a); /* Near-Black background */
+    color: var(--color-white, #ffffff);
+    border-bottom: 4px solid var(--color-tertiary-accent, #00bcd4);
+}
+
+.back-home {
+    /* Reusing link-accent class behavior for consistent hover */
+    display: inline-block;
+    color: var(--color-tertiary-accent, #00bcd4);
     text-decoration: none;
-    color: var(--color-accent);
-}
-/* ===== NAVBAR (Consistent with Index) ===== */
-header {
-  background: var(--color-primary);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem 2rem;
-}
-.logo {
-  color: var(--color-white);
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: 1.5px;
-}
-.logo span {
-  color: var(--color-accent);
-}
-.main-nav {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-.main-nav a {
-  color: var(--color-white);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-.main-nav a:hover {
-  color: #00e1ff;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
 }
 
-/* ===== HERO SECTION ===== */
-.hero {
-  text-align: center;
-  padding: 5rem 1rem 3rem;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
-  color: var(--color-white);
-  border-bottom: 3px solid var(--color-accent);
-}
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-.hero .tagline {
-  font-style: italic;
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: auto;
-  color: #f1f1f1;
+.back-home:hover {
+    color: var(--color-white);
 }
 
-/* ===== CONTENT SECTIONS ===== */
-section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+.case-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
 }
-h2 {
-  color: var(--color-secondary);
-  text-align: center;
-  margin-bottom: 1rem;
+
+.case-header .subtitle {
+    /* Removed 'Dancing Script' for better font consistency/load time */
+    font-style: italic;
+    color: #b3c7d6; /* Light gray for contrast */
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
 }
-.content, .tools {
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
+
+.case-hero-image {
+    background: #e0e0e0; /* Light gray section background */
+    padding: 2rem 0;
+}
+
+.case-img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 3. Content and Sections --- */
+
+.case-content {
+    padding: 3rem 4%;
+    max-width: 950px;
+    margin: 2rem auto;
+}
+
+.content-block {
     background: var(--color-white);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     padding: 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-secondary-accent, #a0203c);
+    border-left: 5px solid var(--color-tertiary-accent, #00bcd4);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.case-content p,
+.case-content ul {
+    color: #444;
+    line-height: 1.7;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.case-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+/* --- 4. Technical Badges (Refined Layout) --- */
+
+.tech-badges {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0;
+}
+
+.tech-badges span {
+    background: #e0f7fa; /* Light Cyan */
+    color: #00796b;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.tech-badges i {
+    margin-right: 6px;
+    color: var(--color-tertiary-accent);
+}
+
+/* --- 5. Metrics & CTA --- */
+
+.metrics-block {
+    text-align: center;
+    margin: 4rem 0;
+    background: var(--color-bg-light);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    border: 1px dashed #ccc;
+}
+
+.metrics-block .section-title {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
-.content ul {
-    list-style: disc;
-    margin-left: 20px;
-    margin-bottom: 1.5rem;
-}
-
-/* ===== TOOLS LIST (badges) ===== */
-.tools h2 { text-align: left; margin-bottom: 1.5rem; }
-.tools ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-.tools li {
-  background: #e0f7fa; /* Light Cyan */
-  color: #00796b;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-/* ===== METRICS / RESULTS ===== */
-.results {
-  background: var(--color-white);
-  padding: 2rem 1rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 3rem;
-}
-.metrics {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
 .metric h3 {
-  font-size: 2.5rem;
-  color: var(--color-accent);
-  margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-tertiary-accent);
+    margin: 0;
 }
+
 .metric p {
-  color: #444;
-  margin-top: 0.5rem;
+    color: #444;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    max-width: 200px;
 }
 
-/* ===== BACK BUTTON ===== */
-.back-btn {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.back-btn a {
-  color: var(--color-secondary);
-  text-decoration: none;
-  font-weight: 600;
-  border: 2px solid var(--color-secondary);
-  padding: 0.7rem 1.5rem;
-  border-radius: 25px;
-  transition: 0.3s;
-}
-.back-btn a:hover {
-  background: var(--color-secondary);
-  color: var(--color-white);
+.case-cta {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background: var(--color-dark);
-  color: var(--color-white);
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+/* Reusing .btn and .btn-primary from main styles.css for CTA button */
+
+/* --- 6. Footer and Responsiveness --- */
+
+.case-footer {
+    background: var(--color-text-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
 }
 
-/* ===== ANIMATIONS ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: all 0.8s ease-in-out;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.copyright {
+    color: #999;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-  .metrics {
-    flex-direction: column;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
+    .case-header h1 {
+        font-size: 2rem;
+    }
+    .metrics {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .metrics-block .section-title {
+        text-align: left;
+    }
+    .metric p {
+        max-width: none;
+    }
+    .content-block {
+        padding: 1.5rem;
+    }
 }

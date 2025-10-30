@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Full System Audit and Hardening for Linux - Case Study by Marco C. Fernandez" />
+    <title>Case Study | Linux Security Audit & Hardening</title>
+    <link rel="icon" href="Offcl.png" sizes="40x50" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="case-styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="case-header">
+        <a href="index.html#projects" class="back-home link-accent">← Back to Portfolio</a>
+        <h1 class="fade-in">Linux System Audit & Hardening Framework</h1>
+        <p class="subtitle fade-in">Engineering trust through transparency—an automated security framework for anomaly detection and system integrity.</p>
+    </header>
+
+    <section class="case-content">
+        <div class="content-block fade-in">
+            <h2 class="section-title">The Operational Challenge</h2>
+            <p>
+                In environments relying on Linux infrastructure, **manual security checks** are prone to human error and compliance gaps. The challenge was to implement a **professional-grade, defensive baseline** that automates log monitoring, file integrity validation, and access control reviews across multiple systems.
+            </p>
+            <p>
+                The goal was to shift defensive operations from reactive troubleshooting to **proactive, automated vigilance**.
+            </p>
+        </div>
+
+        <div class="content-block fade-in">
+            <h2 class="section-title">Implementation & Key Tools</h2>
+            <div class="tech-badges">
+                <span><i class="fab fa-linux"></i> Linux (Debian/Mint)</span>
+                <span><i class="fas fa-terminal"></i> Bash Scripting (Automation)</span>
+                <span><i class="fas fa-shield-alt"></i> AIDE (Integrity Validation)</span>
+                <span><i class="fas fa-lock"></i> Fail2Ban & UFW Firewall</span>
+            </div>
+            <ul>
+                <li>**Core Automation:** Utilized **Bash Scripting** to create a modular audit playbook, managing the execution and reporting of all security checks.</li>
+                <li>**Integrity Verification:** Implemented **AIDE** for full file checksum validation, ensuring that critical configurations and binaries remain untampered.</li>
+                <li>**Intrusion Prevention:** Configured **Fail2Ban** to automatically mitigate brute-force attempts on SSH and other services, directly reducing exposure.</li>
+                <li>**Vulnerability Scanning:** Integrated **Lynis Security Scanner** for continuous, objective security scoring and compliance checking.</li>
+            </ul>
+        </div>
+        
+        <div class="metrics-block fade-in">
+            <h2 class="section-title">Measurable Impact & Results</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <h3>45%</h3>
+                    <p>Improved Baseline Security Score (via Lynis)</p>
+                </div>
+                <div class="metric">
+                    <h3>60%</h3>
+                    <p>Reduced Vulnerability Exposure Window</p>
+                </div>
+                <div class="metric">
+                    <h3>100%</h3>
+                    <p>Audit Automation Success Rate</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block fade-in">
+            <h2 class="section-title">Reflection & Takeaways</h2>
+            <p>
+                This project solidified my understanding that the best defenses come not from complexity, but from **clarity, consistency, and discipline**. A properly monitored system doesn’t just react—it **anticipates**. It's living proof that strategic automation can enable enterprise-level security protocols, even for individual projects.
+            </p>
+            <div class="case-cta">
+                <a href="https://github.com/fernandezmarcoofficial-hash" target="_blank" class="btn btn-primary btn-lg">View Source Code on GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="case-footer">
+        <p class="copyright">© 2025 Marco C. Fernandez - MAFEINNVIONS</p>
+    </footer>
+
+    <script src="case-script.js"></script>
+    <script>
+        const elements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        });
+        elements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

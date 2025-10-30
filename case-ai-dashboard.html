@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI Dashboard & Analytics Assistant - A case study by Marco C. Fernandez, leveraging Python and OpenAI APIs for smarter decision-making." />
+    <title>Case Study | AI Dashboard & Analytics Assistant</title>
+    <link rel="icon" href="Offcl.png" sizes="40x50" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="case-styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="case-header">
+        <a href="index.html#projects" class="back-home link-accent">← Back to Portfolio</a>
+        <h1 class="fade-in">AI Dashboard & Analytics Assistant</h1>
+        <p class="subtitle fade-in">Intelligent automation blending AI, visualization, and algorithmic understanding for smarter decisions.</p>
+    </header>
+
+    <section class="case-content">
+        <div class="content-block fade-in">
+            <h2 class="section-title">Challenge & Vision</h2>
+            <p>
+                The primary challenge was **information overload**—transforming complex, high-volume datasets into meaningful, actionable insights without lengthy manual analysis. The vision was to create a lightweight, **AI-assisted analytics platform** that automates report generation and enhances strategic forecasting.
+            </p>
+            <p>
+                The goal was to build a system where data wasn't just reported, but was actively interpreted by intelligent models before being presented to the user.
+            </p>
+        </div>
+
+        <div class="content-block fade-in">
+            <h2 class="section-title">Implementation & Technology Stack</h2>
+            <div class="tech-badges">
+                <span><i class="fab fa-python"></i> Python (Pandas, Matplotlib)</span>
+                <span><i class="fas fa-brain"></i> OpenAI API (GPT Integration)</span>
+                <span><i class="fas fa-chart-line"></i> HTML5/CSS3 (Dashboard UI)</span>
+                <span><i class="fas fa-magic"></i> Automation & Prompt Engineering</span>
+            </div>
+            <ul>
+                <li>**Data Pipeline:** Used **Python (Pandas)** for robust data cleaning, aggregation, and preprocessing before feeding into visualization or AI models.</li>
+                <li>**AI Integration:** Leveraged the **OpenAI API** with sophisticated **prompt engineering** to generate narrative summaries, identify anomalies, and forecast trends based on real-time data.</li>
+                <li>**Visualization:** Developed a clean, responsive front-end dashboard using **HTML/CSS** to display graphs and key AI-derived takeaways.</li>
+            </ul>
+        </div>
+        
+        <div class="metrics-block fade-in">
+            <h2 class="section-title">Measurable Impact & Results</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <h3>70%</h3>
+                    <p>Reduced Analysis Time</p>
+                </div>
+                <div class="metric">
+                    <h3>35%</h3>
+                    <p>Increased Decision Accuracy</p>
+                </div>
+                <div class="metric">
+                    <h3>100%</h3>
+                    <p>Automation Reliability</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block fade-in">
+            <h2 class="section-title">Reflection & Takeaways</h2>
+            <p>
+                This project reflects my belief that innovation is not just about replacing human effort, but about **amplifying human intuition** through intelligence. The blend of data science, design, and analytical empathy shaped a solution ready for modern data-driven enterprises.
+            </p>
+            <div class="case-cta">
+                <a href="https://github.com/fernandezmarcoofficial-hash" target="_blank" class="btn btn-primary btn-lg">View Source Code on GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="case-footer">
+        <p class="copyright">© 2025 Marco C. Fernandez - MAFEINNVIONS</p>
+    </footer>
+
+    <script src="case-script.js"></script>
+    <script>
+        // Placeholder for fade-in script if not using case-script.js
+        const elements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        });
+        elements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
